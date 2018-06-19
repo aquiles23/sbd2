@@ -37,8 +37,20 @@ CREATE TABLE INFO (
 CREATE TABLE IMAGEM (
     imagem BLOB,
     filename VARCHAR(20) UNIQUE,
-    CONSTRAINT metadado_imagem_FK FOREIGN KEY (filename)
-        REFERENCES METADADO (filename)
+    CONSTRAINT info_imagem_FK FOREIGN KEY (filename)
+        REFERENCES INFO (filename)
 )  ENGINE=INNODB;
 
+
+CREATE VIEW TRAINING_A AS 
+	select i.filename,
+		i.original_filename, 
+		i.scanid, 
+        i.digit, 
+        i.database_name, 
+        i.database_name_original, 
+        i.contributing_team 
+        FROM INFO i, IMAGEM im
+			where i.filename like 'a%' and i.filename = im.filename;
+            
 
