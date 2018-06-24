@@ -2,7 +2,7 @@
 --                                                                   --
 --                    SCRIPT  de criação(DDL)                        --
 --                                                                   --
--- Data Criacao ...........: 13/10/2017                              --
+-- Data Criacao ...........: 17/10/2018                              --
 -- Autor(es) ..............: José Aquiles , Ramon           --
 -- Banco de Dados .........: MySQL                                   --
 -- Banco de Dados(nome) ...: NUMTA                                  --
