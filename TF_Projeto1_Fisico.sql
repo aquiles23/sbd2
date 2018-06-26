@@ -25,7 +25,6 @@ CREATE TABLE ATHLETE (
     ID INT NOT NULL PRIMARY KEY,
     name VARCHAR(50),
     sex CHAR(1),
-    age INT,
     height VARCHAR(10),
     weight VARCHAR(10),
     team VARCHAR(50),
