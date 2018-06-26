@@ -5,7 +5,7 @@
 -- Data Criacao ...........: 24/06/2018                              --
 -- Autor(es) ..............: José Aquiles , Ramon           --
 -- Banco de Dados .........: MySQL                                   --
--- Banco de Dados(nome) ...: olympic                                --
+-- Banco de Dados(nome) ...: olympic                                  --
 --                                                                   --
 --                                                                   --
 -- PROJETO => 1 Base de Dados                                        --
@@ -13,7 +13,11 @@
 -- ----------------------------------------------------------------- --
 
 use olympic;
-drop table participate;
-drop table EVENT;
-drop table ATHLETE;
-DROP table NOC_REGION;
+
+create user ADMIN
+identified by 'ahnes';
+
+grant all on olympic.* to ADMIN ;
+
+
+
