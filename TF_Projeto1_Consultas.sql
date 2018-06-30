@@ -1,6 +1,6 @@
 -- --------            << PROJETO1 >>            ------------ --
 --                                                                   --
---                    SCRIPT  de manipulação(DDL)                        --
+--                    SCRIPT  de manipulação(DML)                        --
 --                                                                   --
 -- Data Criacao ...........: 24/06/2018                              --
 -- Autor(es) ..............: José Aquiles , Ramon           --
@@ -9,7 +9,7 @@
 --                                                                   --
 --                                                                   --
 -- PROJETO => 1 Base de Dados                                        --
---         => 2 tabelas                                              --
+--         => 4 tabelas                                              --
 -- ----------------------------------------------------------------- --
 
 -- consulta que procura pelas informações sobre o giba e sobre a olimpiada que ele participou em 2000 sem precisar saber o nome dele

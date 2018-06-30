@@ -9,7 +9,7 @@
 --                                                                   --
 --                                                                   --
 -- PROJETO => 1 Base de Dados                                        --
---         => 2 tabelas                                              --
+--         => 4 tabelas                                              --
 -- ----------------------------------------------------------------- --
 
 create database olympic;
@@ -28,7 +28,8 @@ CREATE TABLE ATHLETE (
     height VARCHAR(10),
     weight VARCHAR(10),
     team VARCHAR(50),
-    NOC VARCHAR(10)
+    NOC VARCHAR(10),
+    CONSTRAINT noc_region_athlete foreign key (NOC) references NOC_REGION (NOC)
 );
 
 CREATE TABLE EVENT (
@@ -38,7 +39,6 @@ CREATE TABLE EVENT (
     city VARCHAR(50),
     sport VARCHAR(50),
     event VARCHAR(100) NOT NULL,
-    medal VARCHAR(10),
     CONSTRAINT eventPK PRIMARY KEY (event , year)
 );
 
@@ -46,6 +46,8 @@ CREATE TABLE participate (
     athlete_id INT NOT NULL,
     event VARCHAR(100) NOT NULL,
     year INT NOT NULL,
+    age int,
+    medal varchar(10),
     CONSTRAINT participatePK PRIMARY KEY (athlete_id , event , year),
     CONSTRAINT athlete_participate FOREIGN KEY (athlete_id)
         REFERENCES ATHLETE (ID),
